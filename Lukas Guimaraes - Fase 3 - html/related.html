@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Related - Lukas Guimarães</title>
+  <style>
+    body {
+      background: #fff;
+    }
+
+    .menu {
+      background: #fff;
+    }
+
+    .menu .brand,
+    .menu .links a {
+      color: #000;
+    }
+
+    /* Desktop menu override */
+    @media (min-width: 769px) {
+      .menu {
+        background: #fff !important;
+      }
+
+      .menu .brand,
+      .menu .links a {
+        color: #000 !important;
+      }
+    }
+
+    .related-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      background: #fff;
+      padding: 40px 20px;
+    }
+
+    .related-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .related-card {
+      flex: 0 0 calc(50% - 50px);
+      max-width: 450px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .related-card:nth-child(1) {
+      transform: translateY(30px);
+    }
+
+    .related-card:nth-child(2) {
+      transform: translateY(-30px);
+    }
+
+    .related-card a {
+      text-decoration: none;
+      display: block;
+      width: 100%;
+    }
+
+    .related-card-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .related-card-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .related-card:hover .related-card-image::before {
+      opacity: 1;
+    }
+
+    .related-card-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .related-card:hover .related-card-image img {
+      transform: scale(1.03);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      text-transform: uppercase;
+      z-index: 2;
+      text-align: center;
+      width: calc(100% - 40px);
+      display: none;
+    }
+
+    .related-card-label {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .related-card-label-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .related-card-label-subtitle {
+      font-size: 7px;
+      font-weight: 400;
+      color: #999;
+      font-style: italic;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .related-wrapper {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .related-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        transform: none !important;
+      }
+
+      .related-card-title {
+        display: block;
+        font-size: 18px;
+      }
+
+      .related-card-label {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <section class="related-container">
+    <div class="related-wrapper">
+      <div class="related-card">
+        <a href="emiliano.html">
+          <div class="related-card-image">
+            <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135404/EMILIANO_14_NOV0240_g7jioz.webp" alt="Emiliano Gallery">
+          </div>
+          <div class="related-card-title">Emiliano</div>
+        </a>
+        <div class="related-card-label">
+          <div class="related-card-label-title">Emiliano</div>
+          <div class="related-card-label-subtitle">Hotel</div>
+        </div>
+      </div>
+
+      <div class="related-card">
+        <a href="zbl.html">
+          <div class="related-card-image">
+            <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135428/ZBL_13MAR-73_cwxwys.webp" alt="Zbl Gallery">
+          </div>
+          <div class="related-card-title">Zbl</div>
+        </a>
+        <div class="related-card-label">
+          <div class="related-card-label-title">ZBL</div>
+          <div class="related-card-label-subtitle">Jewelry</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const menuLinks = menu.querySelectorAll('.links a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

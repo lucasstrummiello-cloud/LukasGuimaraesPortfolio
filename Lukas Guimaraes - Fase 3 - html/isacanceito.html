@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>ISA CANCEITO - Lukas Guimarães</title>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <style>
+    @media (max-width: 768px) {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+      .menu.active {
+        left: 0;
+      }
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Horizontal Scroll Gallery -->
+  <section class="horizontal-gallery">
+    <div class="scroll-container">
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR0248.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR0255.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR0293.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR0324.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR0399.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR0770.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR0904.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR1062.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR1320.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR1335.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR1435.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR1444.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR1555.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR1786.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR2131.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR2446.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR2650.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR2801.jpg" alt="ISA CANCEITO">
+      </div>
+      <div class="scroll-item">
+        <img src="Isa Canceito/ISA_CANCEITO_20MAR2813.jpg" alt="ISA CANCEITO">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const menuLinks = menu.querySelectorAll('.links a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      });
+    }
+
+    // Horizontal scroll functionality
+    const scrollContainer = document.querySelector('.scroll-container');
+    
+    if (scrollContainer) {
+      scrollContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollContainer.scrollLeft += e.deltaY * 5;
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>RAY - Lukas Guimarães</title>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <style>
+    @media (max-width: 768px) {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+      .menu.active {
+        left: 0;
+      }
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Horizontal Scroll Gallery -->
+  <section class="horizontal-gallery">
+    <div class="scroll-container">
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135432/RAY_03_SETEMBRO2944_kedhwi.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135423/RAY_03_SETEMBRO2963_sseahs.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135433/RAY_03_SETEMBRO3074_wmmh1h.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135432/RAY_03_SETEMBRO3349_cpjc9k.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135433/RAY_03_SETEMBRO3571_-_Copia_ligqfa.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135431/H-RAY_03_SETEMBRO2634_h23d1v.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135424/RAY_03_SETEMBRO3784_a5b6ug.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135424/RAY_03_SETEMBRO3792_htsxjt.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135421/H-RAY_12_FEV21377_m6fujm.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135421/H-RAY_12_FEV21404_dfvrv2.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135422/H-RAY_12_FEV21413_dypqyh.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135422/RAY_0090_jwcymh.webp" alt="RAY">
+         </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135438/RAY_03_SETEMBRO2971_nhzeda.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135422/RAY_0079_po6292.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135422/RAY_0006_isdygt.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135437/H-RAY_03_SETEMBRO2678_1_gcfyhl.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135431/RAY_03_SETEMBRO2742_z6jh0r.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135437/H-RAY_03_SETEMBRO2775_fyxpkh.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135437/H-RAY_03_SETEMBRO2777_chmwsm.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135439/RAY_03_SETEMBRO2837_tescnu.webp" alt="RAY">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135439/RAY_03_SETEMBRO2844_fukeeb.webp" alt="RAY">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/q_auto:best,f_auto/v1776135432/H-RAY_03_SETEMBRO2884_le7gde.webp" alt="RAY">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const menuLinks = menu.querySelectorAll('.links a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      });
+    }
+
+    // Horizontal scroll functionality
+    const scrollContainer = document.querySelector('.scroll-container');
+    
+    if (scrollContainer) {
+      scrollContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollContainer.scrollLeft += e.deltaY * 5;
+      });
+    }
+  </script>
+
+</body>
+</html>

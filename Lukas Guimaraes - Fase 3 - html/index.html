@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Lukas Guimarães</title>
+  <style>
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      /* Hide desktop menu */
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+
+      .menu.active {
+        left: 0;
+      }
+
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+
+      /* Mobile menu toggle button */
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+
+      /* Gallery - full screen cards with gaps */
+      .gallery {
+        column-count: 1;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        scroll-snap-type: y mandatory;
+        gap: 15px;
+      }
+
+      .item-link {
+        display: block;
+        width: 100%;
+        height: auto;
+        scroll-snap-align: start;
+      }
+
+      .item-link::before {
+        content: none;
+      }
+
+      .item {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+
+      .item-link:first-child .item {
+        margin-top: 0;
+      }
+
+      .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Title styling for mobile - inside photo */
+      .item-title {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        z-index: 2;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        width: calc(100% - 40px);
+      }
+
+      .item-subtitle {
+        display: none;
+      }
+
+      .item::before {
+        display: none;
+      }
+
+      .item:hover::before {
+        display: none;
+      }
+
+      .item:hover .item-title {
+        opacity: 1;
+      }
+    }
+  </style></head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <section class="gallery">
+    
+    <a href="ray.html" class="item-link" data-title="Ray">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351727/work1_oyoflm.webp" alt="">
+        <div class="item-title">RAY</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+  
+
+    <a href="isacanceito.html" class="item-link" data-title="Isa Canceito">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351726/work5_etsp0w.webp" alt="">
+        <div class="item-title">ISA CANCEITO</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+    
+     <a href="dicroce.html" class="item-link" data-title="Di Croce">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351726/work6_qosnbg.webp" alt="">
+        <div class="item-title">DI CROCE</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+   
+    <a href="batiche.html" class="item-link" data-title="Batiche">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351728/work7_wbsdqb.webp" alt="">
+        <div class="item-title">BATICHE</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+     <a href="madresanta.html" class="item-link" data-title="Madre Santa">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351725/work2_f76hq9.webp" alt="">
+        <div class="item-title">MADRE SANTA</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+       <a href="paularaia.html" class="item-link" data-title="Paula Raia">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351726/work4_wm81tx.webp" alt="">
+        <div class="item-title">Paula Raia</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+    <a href="oferenda.html" class="item-link" data-title="Oferenda">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351728/work8_oihxjw.webp" alt="">
+        <div class="item-title">Oferenda</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+     <a href="isacapeto.html" class="item-link" data-title="Isa Capeto">
+      <div class="item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1780351725/work3_bbfadc.webp" alt="">
+        <div class="item-title">ISA CAPETO</div>
+        <div class="item-subtitle">fashion</div>
+      </div>
+    </a>
+
+
+
+    <!-- Just keep adding more works -->
+    
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const menuLinks = menu.querySelectorAll('.links a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

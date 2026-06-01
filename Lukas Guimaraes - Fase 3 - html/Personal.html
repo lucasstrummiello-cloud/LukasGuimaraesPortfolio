@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Personal - Lukas Guimarães</title>
+  <style>
+    body {
+      background: #fff;
+    }
+
+    .menu {
+      background: #fff;
+    }
+
+    .menu .brand,
+    .menu .links a {
+      color: #000;
+    }
+
+    /* Desktop menu override */
+    @media (min-width: 769px) {
+      .menu {
+        background: #fff !important;
+      }
+
+      .menu .brand,
+      .menu .links a {
+        color: #000 !important;
+      }
+    }
+
+    .gallery-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: calc(100vh - 80px);
+      overflow: hidden;
+      background: #fff;
+      padding: 15px;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1000px;
+      max-height: 800px;
+      background: #fff;
+    }
+
+    .carousel {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      top: 0;
+      left: 0;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+    }
+
+    .carousel-slide img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Keyboard navigation hint */
+    .carousel-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(109, 109, 109, 0.877);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      z-index: 5;
+    }
+
+    /* Arrow buttons */
+    .carousel-button {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.0);
+      border: none;
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 24px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background 0.3s ease;
+      z-index: 10;
+    }
+
+    .carousel-button:hover {
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <style>
+    @media (max-width: 768px) {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+      .menu.active {
+        left: 0;
+      }
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Image Gallery -->
+  <section class="gallery-container">
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <!-- Generated slides will be inserted here -->
+      </div>
+      <button class="carousel-button prev" onclick="previousSlide()">❮</button>
+      <button class="carousel-button next" onclick="nextSlide()">❯</button>
+      </div>
+      <div class="carousel-hint"></div>
+    </div>
+  </section>
+
+  <script>
+    // Image list from QUADROS folder
+    const images = [
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135428/IMG_3228_zhfhrk.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135420/IMG_3232_b98wjl.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135429/IMG_3233_jgansr.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135421/IMG_3253_mmvcpf.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135421/IMG_3262_w5z9yb.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135436/IMG_3409_z1t9hm.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135421/IMG_3430_wvgshb.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135421/IMG_3432_xbaq5w.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135429/IMG_3434_aervnu.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135429/IMG_3441_f9xyep.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135429/IMG_3450_lyzrnt.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135430/IMG_3460_klcyg2.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135430/IMG_3498_vvheif.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135430/IMG_3545_koha9c.webp',
+      'https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135421/IMG_3572_hnnpgw.webp'
+    ];
+
+    let currentSlide = 0;
+    let autoAdvanceTimer;
+
+    // Initialize carousel
+    function initCarousel() {
+      const carousel = document.querySelector('.carousel');
+
+      // Create slides
+      images.forEach((img, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide' + (index === 0 ? ' active' : '');
+        const imgElement = document.createElement('img');
+        imgElement.src = img;
+        imgElement.alt = `Gallery image ${index + 1}`;
+        slide.appendChild(imgElement);
+        carousel.appendChild(slide);
+      });
+
+      // Start auto-advance
+      startAutoAdvance();
+    }
+
+    // Update carousel display
+    function updateCarousel() {
+      const slides = document.querySelectorAll('.carousel-slide');
+
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    // Navigate to specific slide
+    function goToSlide(index) {
+      currentSlide = (index + images.length) % images.length;
+      updateCarousel();
+      resetAutoAdvance();
+    }
+
+    // Next slide
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % images.length;
+      updateCarousel();
+      resetAutoAdvance();
+    }
+
+    // Previous slide
+    function previousSlide() {
+      currentSlide = (currentSlide - 1 + images.length) % images.length;
+      updateCarousel();
+      resetAutoAdvance();
+    }
+
+    // Auto-advance functionality
+    function startAutoAdvance() {
+      autoAdvanceTimer = setInterval(() => {
+        nextSlide();
+      }, 5500); // 5.5 seconds
+    }
+
+    function resetAutoAdvance() {
+      clearInterval(autoAdvanceTimer);
+      startAutoAdvance();
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') previousSlide();
+    });
+
+     // Mouse navigation
+    document.addEventListener('wheel', (e) => {
+      if (e.deltaY > 0) nextSlide();
+      if (e.deltaY < 0) previousSlide();
+    });
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', initCarousel);
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const menuLinks = menu.querySelectorAll('.links a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

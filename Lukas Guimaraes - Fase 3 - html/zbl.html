@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Zbl - Lukas Guimarães</title>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <style>
+    @media (max-width: 768px) {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+      .menu.active {
+        left: 0;
+      }
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Horizontal Scroll Gallery -->
+  <section class="horizontal-gallery">
+    <div class="scroll-container">
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135425/ZBL_13MAR-3_pgg98r.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135424/ZBL_13MAR-10_hzh2qw.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135424/ZBL_13MAR-13_mptv1j.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135425/ZBL_13MAR-20_kbo5ss.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135425/ZBL_13MAR-22_wxj65x.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135432/ZBL_13MAR-24_xew35w.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135439/ZBL_13MAR-31_ebilzq.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135425/ZBL_13MAR-32_xkjyie.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135425/ZBL_13MAR-33_oyqigm.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item ">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135433/ZBL_13MAR-35_rilvvy.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135433/ZBL_13MAR-36_gowwrg.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135426/ZBL_13MAR-37_krvaaz.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item ">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135435/ZBL_13MAR-38_mbo50w.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135435/ZBL_13MAR-39_nsc0og.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135426/ZBL_13MAR-4_xvliut.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135435/ZBL_13MAR-41_apgxuo.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135426/ZBL_13MAR-43_eo24va.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135426/ZBL_13MAR-44_sszl0v.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135426/ZBL_13MAR-46_e0b3ge.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135426/ZBL_13MAR-47_otynfd.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135427/ZBL_13MAR-5_ouape1.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135427/ZBL_13MAR-50_ere0yx.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135435/ZBL_13MAR-53_oaxdwj.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135427/ZBL_13MAR-55_zixacd.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135427/ZBL_13MAR-56_tpmc8o.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135427/ZBL_13MAR-57_gwc0k8.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135427/ZBL_13MAR-59_lr2r6s.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135427/ZBL_13MAR-61_kvntxw.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135428/ZBL_13MAR-73_cwxwys.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135436/ZBL_13MAR-77_c0krgz.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135428/ZBL_13MAR-79_xgqiwj.webp" alt="Zbl">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135428/ZBL_13MAR-9_ncvivk.webp" alt="Zbl">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const menuLinks = menu.querySelectorAll('.links a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+      });
+    });
+
+    // Scroll wheel gallery functionality
+    const scrollContainer = document.querySelector('.scroll-container');
+    if (scrollContainer) {
+      scrollContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollContainer.scrollLeft += e.deltaY * 5;
+      });
+    }
+  </script>
+</body>
+</html>

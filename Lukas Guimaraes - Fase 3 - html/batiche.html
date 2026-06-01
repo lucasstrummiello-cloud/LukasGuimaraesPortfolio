@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>BATICHE - Lukas Guimarães</title>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <style>
+    @media (max-width: 768px) {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+      .menu.active {
+        left: 0;
+      }
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Horizontal Scroll Gallery -->
+  <section class="horizontal-gallery">
+    <div class="scroll-container">
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135396/BATICHE_10MAR_2025_0036_aomdmx.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135396/BATICHE_10MAR_2025_0045_vmmt0y.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_0059_g5ncww.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_0081_cspriy.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_0139_sqd1us.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_0140_qfjx4n.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_0151_l1yl0o.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135396/BATICHE_10MAR_2025_0938_nbqkja.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135396/BATICHE_10MAR_2025_0958_qlzsjo.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135396/BATICHE_10MAR_2025_0959_v0g2sq.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135400/BATICHE_10MAR_2025_0962_jfyocu.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_1012_cj789o.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_1020_jmmy3u.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_1023_xepxa6.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135397/BATICHE_10MAR_2025_1045_qgszje.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135398/BATICHE_24SET_10125_cq8tyn.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_24SET_10128_fwswim.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135402/BATICHE_24SET_10136_yortbp.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135402/BATICHE_24SET_6305_m5k6cx.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_24SET_6310_ctyn68.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_24SET_7066_zwrxuc.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_24SET_7113_bl8ni6.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135400/BATICHE_24SET_7116_umh77l.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135398/BATICHE_24SET_7704_nyb4kz.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_24SET_7740_nnnwpm.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135400/BATICHE_24SET_9027_mgz8pg.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135410/BATICHE_24SET_9071_le1ekg.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_24SET_9204_wqbs9j.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_24SET_9449_ln9iah.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135400/BATICHE_24SET_9929_okcdzw.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_24SET_9934_otctsf.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135398/BATICHE_2ABR0035_ssht5y.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135398/BATICHE_2ABR0038_oiwpna.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135398/BATICHE_2ABR0182_t2b5ps.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135398/BATICHE_2ABR0198_wiod8n.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135398/BATICHE_2ABR0365_zmxcvm.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135400/BATICHE_2ABR0975_i1eycm.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR1004_qhsj2b.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR1130_kqdsa7.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR1236_izfevk.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR1312_dldms1.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR1528_u3jec0.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135400/BATICHE_2ABR1560_ud0cus.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR1566_kmiafn.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR1575_kql88y.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR2177_dm4q9a.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135399/BATICHE_2ABR2178_b4cqpn.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135401/BATICHE_2ABR2813_gonthq.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135402/BATICHE_2ABR3316_kayqyv.webp" alt="BATICHE">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135402/BATICHE_2ABR3472_rspac3.webp" alt="BATICHE">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const menuLinks = menu.querySelectorAll('.links a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      });
+    }
+
+    // Horizontal scroll functionality
+    const scrollContainer = document.querySelector('.scroll-container');
+    
+    if (scrollContainer) {
+      scrollContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollContainer.scrollLeft += e.deltaY * 5;
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>MADRE SANTA - Lukas Guimarães</title>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <style>
+    @media (max-width: 768px) {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+      .menu.active {
+        left: 0;
+      }
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Horizontal Scroll Gallery -->
+  <section class="horizontal-gallery">
+    <div class="scroll-container">
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/MADRE_SANTA0052_h0s7gu.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/MADRE_SANTA0074_cnbvbq.webp" alt="MADRE SANTA">
+      </div>
+            <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135411/H-MADRE_SANTA0026_md6p7s.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/MADRE_SANTA0090_jdbvuu.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/MADRE_SANTA0212_jjfav2.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/MADRE_SANTA0219_zetxh7.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/MADRE_SANTA0221_c7bn8p.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0424_mmwsyt.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0439_cou32w.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0452_xcuybh.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0617_uv2vdw.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0654_gugofq.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0657_ehzyc9.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0660_exmsgd.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0675_nwxwh0.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0682_zytbb4.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135413/MADRE_SANTA0697_qaeqbj.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA0706_kpp73l.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA0786_ea8ptr.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA0934_yypht1.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA1059_qxhcj3.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA1060_sy2md3.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA1120_nfwalz.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA1148_jitx0z.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRE_SANTA1153_sgdnqn.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRE_SANTA1163_rugsyi.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/H-MADRE_SANTA1192_dtz9po.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/H-MADRE_SANTA1213_myeflw.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRE_SANTA1311_zirvqq.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135414/MADRESANTA_7AGO387_sdrsub.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/H-MADRESANTA_7AGO494_ctu3b6.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_7AGO520_b3cdo4.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_7AGO632_g4kwul.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_7AGO65_kytja0.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item horizontal">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135412/H-MADRESANTA_7AGO820_hjgpvl.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_9JULHO_28_gt5lle.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_9JULHO_35_mo2byj.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_9JULHO_36_oznoxk.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_9JULHO_568_pwztno.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_9JULHO_570_dmxtka.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135415/MADRESANTA_9JULHO_587_ynh3yl.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135416/MADRESANTA_9JULHO_648_prassu.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135416/MADRESANTA_9JULHO_656_qqjxcc.webp" alt="MADRE SANTA">
+      </div>
+      <div class="scroll-item">
+        <img src="https://res.cloudinary.com/dzq63qnd1/image/upload/v1776135416/MADRESANTA_9JULHO_939_mfafma.webp" alt="MADRE SANTA">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const menuLinks = menu.querySelectorAll('.links a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      });
+    }
+
+    // Horizontal scroll functionality
+    const scrollContainer = document.querySelector('.scroll-container');
+    
+    if (scrollContainer) {
+      scrollContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollContainer.scrollLeft += e.deltaY * 5;
+      });
+    }
+  </script>
+
+</body>
+</html>

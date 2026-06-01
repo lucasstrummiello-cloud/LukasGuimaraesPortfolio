@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* navigation menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background: #fff;
+  /* box-shadow removed per request */
+}
+
+.menu .brand {
+  font-size: 0.875rem; /* reduced further */
+  font-weight: 700; /* Inter Bold */
+  letter-spacing: -0.5px; /* tighter kerning */
+  text-transform: uppercase;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.menu .links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 400; /* Inter Regular */
+  text-transform: uppercase;
+  font-size: 0.875rem; /* a bit smaller */
+}
+
+
+.gallery {
+  column-count: 4;        /* Number of columns */
+  column-gap: 5px;        /* Reduced gap between columns */
+  padding: 0px 20px 40px; /* side padding matches column gap */
+}
+
+.item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  break-inside: avoid;
+}
+
+
+.item {
+  break-inside: avoid;
+  margin-bottom: 5px;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.item:hover::before {
+  opacity: 1;
+}
+
+.item-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10pt;
+  font-weight: 400; /* Inter Regular */
+  text-transform: uppercase;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.item:hover .item-title {
+  opacity: 1;
+}
+
+.item-subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 16px;
+  font-size: 6pt;
+  font-weight: 400; /* Inter Regular */
+  text-transform: uppercase;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.item:hover .item-subtitle {
+  opacity: 1;
+}
+
+.item img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.item:hover img {
+  transform: scale(1.03);
+}
+
+/* Horizontal Scroll Gallery */
+.horizontal-gallery {
+  padding: 0;
+  width: 100%;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 120px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.scroll-item {
+  flex-shrink: 0;
+  width: calc(30vw / 1);
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-item.horizontal {
+  width: calc(70vw / 1);
+  height: calc(100vh - 70px);
+}
+
+.scroll-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Desktop Menu Styles */
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #fff !important;
+    flex-direction: row !important;
+    padding: 20px 20px !important;
+    left: 0 !important;
+    transition: none !important;
+  }
+
+  .menu .brand {
+    color: #333 !important;
+  }
+
+  .menu .links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .menu .links a {
+    margin-left: 24px !important;
+    color: #333 !important;
+  }
+
+  /* Hide menu toggle on desktop */
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* Mobile Horizontal Gallery - Vertical Scroll */
+@media (max-width: 768px) {
+  .horizontal-gallery {
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .scroll-container {
+    gap: 0;
+    padding-bottom: 0;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .scroll-item {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: 15px;
+  }
+
+  .scroll-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .scroll-item.horizontal {
+    width: 100%;
+    height: auto;
+  }
+
+  .scroll-item.horizontal img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

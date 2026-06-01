@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inter font for menu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Info - Lukas Guimarães</title>
+  <style>
+    body {
+      background: #fff;
+    }
+
+    .menu {
+      background: #fff;
+    }
+
+    .menu .brand,
+    .menu .links a {
+      color: #000;
+    }
+
+    /* Desktop menu override */
+    @media (min-width: 769px) {
+      .menu {
+        background: #fff !important;
+      }
+
+      .menu .brand,
+      .menu .links a {
+        color: #000 !important;
+      }
+    }
+
+    .info-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      background: #fff;
+      padding: 40px 20px;
+    }
+
+    .info-content {
+      display: flex;
+      gap: 60px;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+    }
+
+    .info-image {
+      flex: 0 0 340px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .info-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+      object-fit: cover;
+    }
+
+    .info-image .instagram-btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      border-radius: 0;
+      transition: background 0.3s ease;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+    }
+
+    .info-image .instagram-btn:hover {
+      background: #333;
+    }
+
+    .info-text {
+      flex: 1;
+      color: #000;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .info-text h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      letter-spacing: -0.5px;
+      color: #000;
+    }
+
+    .info-text .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      color: #666;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .info-text p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .info-content {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .info-image {
+        flex: 0 0 auto;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .info-text h1 {
+        font-size: 24px;
+      }
+
+      .info-text p {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- navigation menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html" class="brand-link">
+      <div class="brand">Lukas Guimarães</div>
+    </a>
+    <div class="links">
+      <a href="Personal.html">Personal</a>
+      <a href="related.html">Related</a>
+      <a href="Info.html">Info</a>
+    </div>
+  </nav>
+
+  <style>
+    @media (max-width: 768px) {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+      .menu.active {
+        left: 0;
+      }
+      .menu .brand {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #000;
+        width: 100%;
+      }
+      .menu .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .menu .links a {
+        color: #000;
+        margin-left: 0;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Info Section -->
+  <section class="info-container">
+    <div class="info-content">
+      <div class="info-image">
+        <img src="WhatsApp Image 2026-03-17 at 04.32.03.jpeg" alt="Lukas Guimarães">
+        <a href="https://www.instagram.com/lukasguimaraes.s/" class="instagram-btn">INSTAGRAM</a>
+      </div>
+      <div class="info-text">
+        <h1>Sobre mim</h1>
+        <div class="subtitle">Fotografia por Lukas Guimarães</div>
+        
+        <p>
+          Fotógrafo estabelecido em São Paulo. Há mais de 15 anos, capturo pessoas, lugares e perspectivas através da fotografia. Meus projetos favoritos são com pessoas.
+        </p>
+        
+        <p>
+          Cada rosto que fotografo carrega uma história única, um universo de experiências e sentimentos que tento traduzir através das lentes. As rugas de um idoso, o brilho nos olhos de uma criança, a expressão pensativa de um jovem – todos esses elementos compõem a narrativa visual que desejo compartilhar com o mundo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const menuLinks = menu.querySelectorAll('.links a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('active');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
